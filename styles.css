@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+#hero {
+    background: #3498db;
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    animation: slideIn 2s ease-in-out;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: #fff;
+    background: #e74c3c;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.home-content {
+    padding: 2rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1000px;
+    margin-top: 1rem;
+}
+
+#features {
+    background: #f4f4f4;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1 1 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+#pricing {
+    background: #fff;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.pricing-plan {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1 1 30%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-plan h3 {
+    margin: 0.5rem 0;
+}
+
+.pricing-plan .price {
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+
+.pricing-plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-plan li {
+    padding: 0.5rem 0;
+}
+
+#testimonials {
+    background: #f4f4f4;
+}
+
+.testimonials-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.testimonial {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1 1 80%;
+    transition: transform 0.5s ease;
+}
+
+.testimonials-carousel:hover .testimonial {
+    transform: translateX(-20%);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.social-media {
+    margin: 1rem 0;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: #555;
+}
+
+.social-icon:hover {
+    background: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features-grid, .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature, .pricing-plan {
+        flex: 1 1 100%;
+    }
+
+    .testimonials-carousel {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.5rem 0;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
